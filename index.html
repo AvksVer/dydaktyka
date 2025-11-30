@@ -219,6 +219,7 @@ A baba na to:   <br />
 
 
  <!-- zadanie 9(tabela) -->
+
 <table style="border: 3px solid black; border-collapse: collapse; width: 100%;">
 
    <caption style="font-size: 22px; margin-bottom: 10px;">
@@ -313,9 +314,161 @@ A baba na to:   <br />
       </tr>
 
    </tbody>
+
+
+<!-- Formularz-->
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title> Formularz o udział w projekcie edukacyjmym / konkursie szkolnym </title> 
+body {
+	font-family: Arial, sans_serif;
+	margin:40px;
+	background-color:#f8f8f8;
+}
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+form {
+	background: white;
+	padding: 25px;
+	border-radius: 12px;
+	max-width: 700 px;
+	margin: auto;
+	box-shadow: 0 0 10 px rgba(0,0,0,0,2);
+}
+.row {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+textarea {
+	height: 100px;
+	resize: vertical;
+}
+label { 
+	font-weight: bold;
+	display: block;
+	margin-top: 10px;
+}
+.buttons {
+	padding:10px 20px;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+button {
+	padding: 10px 20 px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font_weight: bold;
+}
+button[type="reset"] {
+	background-color: #ddd;
+} 
+button[type="submit"] {
+	baclground-color: #4CAF5O;
+	color: white;
+}
+</style>
+</head?
+<body>
+
+<h2> Formularz o udziałe w projekcie edukacyjnym / konkursie szkolnym</h2>
+<form>
+  <div class="row">
+    <div>
+  	<label> Imię </label>
+	<input type="text" name="imie">
+	</div>
+<div>
+	<label> Nazwisko</label>
+	<input type="text" name="nazwisko">
+</div>
+
+<div> 
+	<label>Klasa</label>
+	<input type="text" name="klasa">
+</div>
+</div>
+
+<label>Nazwa projektu / konkursu</label>
+<input type="text" name="nazwa">
+
+<h3>Dane osobowe:</h3>
+<label>Data urodzenie</label>
+<input type="date" name="data">
+
+<label>PESEL</label>
+<input type="text" name="pesel">
+
+<label>Adres zamieszkania</label>
+  <input type="text" name="adres">
+
+  <label>Telefon kontaktowy</label>
+  <input type="tel" name="telefon">
+
+  <label>E-mail</label>
+  <input type="email" name="email">
+
+  <h3>Informacje dotyczące udziału</h3>
+
+  <label>Doświadczenie w podobnych projektach / konkursach</label>
+  <select name="doswiadczenie">
+    <option>brak</option>
+    <option>1–2 projekty</option>
+    <option>3 i więcej</option>
+  </select>
+
+  <label>Zainteresowania związane z projektem</label>
+  <select name="zainteresowania">
+    <option>nauki ścisłe</option>
+    <option>humanistyczne</option>
+    <option>artystyczne</option>
+    <option>techniczne</option>
+    <option>inne</option>
+  </select>
+
+  <label>Znajomość języków obcych</label>
+  <select name="jezyki" multiple>
+    <option>angielski</option>
+    <option>niemiecki</option>
+    <option>francuski</option>
+    <option>inny</option>
+  </select>
+
+  <label>Forma udziału w projekcie</label>
+  <select name="forma">
+    <option>indywidualna</option>
+    <option>grupowa</option>
+    <option>jako lider zespołu</option>
+  </select>
+
+  <h3>Deklaracja uczestnika:</h3>
+  <p>Oświadczam, że zapoznałem(am) się z regulaminem projektu / konkursu i zobowiązuję się do jego przestrzegania.</p>
+
+  <div class="row">
+    <div>
+      <label>Podpis ucznia</label>
+      <input type="text" name="podpis">
+    </div>
+    <div>
+      <label>Data</label>
+      <input type="date" name="data_podpisu">
+    </div>
+  </div>
+
+  <label>Opinia nauczyciela / wychowawcy</label>
+  <textarea name="opinia"></textarea>
+
+  <div class="buttons">
+    <button type="reset">RESET</button>
+    <button type="submit">SUBMIT</button>
+  </div>
+</form>
+
 </table>    </body>
 </html>
-
 
 
 
