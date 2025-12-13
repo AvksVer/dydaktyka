@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz o udział w projekcie edukacyjnym / konkursie szkolnym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 20mm;
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .field {
+            flex: 1;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 3px;
+            font-size: 12px;
+        }
+        textarea {
+            resize: none;
+        }
+        .box-group {
+            border: 1px solid #000;
+            padding: 8px;
+            font-size: 12px;
+        }
+        .box-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .checkbox-list,
+        .radio-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .checkbox-list li,
+        .radio-list li {
+            margin-bottom: 3px;
+        }
+        .big-textarea {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .buttons-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .buttons-row button {
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+        .center-row {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <form>
+
+        <h1>Formularz o udział w projekcie edukacyjnym / konkursie szkolnym</h1>
+
+        <!-- Imię, Nazwisko, Klasa -->
+        <div class="row">
+            <div class="field">
+                <label>Imię</label>
+                <input type="text" name="imie">
+            </div>
+            <div class="field">
+                <label>Nazwisko</label>
+                <input type="text" name="nazwisko" value="Avksentieva">
+            </div>
+            <div class="field">
+                <label>Klasa</label>
+                <input type="text" name="klasa">
+            </div>
+        </div>
+
+        <!-- Nazwa projektu -->
+        <div class="row">
+            <div class="field">
+                <label>Nazwa projektu / konkursu:</label>
+                <input type="text" name="nazwa_projektu">
+            </div>
+        </div>
+
+        <!-- Dane osobowe + Informacje o udziale -->
+        <div class="row">
+            <!-- Dane osobowe -->
+            <div class="field">
+                <div class="box-group">
+                    <div class="box-title">Dane osobowe:</div>
+                    <label>Data urodzenia:</label>
+                    <input type="date" name="data_urodzenia">
+
+                    <label>PESEL:</label>
+                    <input type="text" name="pesel">
+
+                    <label>Adres zamieszkania:</label>
+                    <input type="text" name="adres">
+
+                    <label>Telefon kontaktowy:</label>
+                    <input type="text" name="telefon">
+
+                    <label>E-mail:</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+
+            <!-- Informacje dotyczące udziału -->
+            <div class="field">
+                <div class="box-group">
+                    <div class="box-title">Informacje dotyczące udziału</div>
+
+                    <label>Doświadczenie w podobnych projektach / konkursach:</label>
+                    <select name="doswiadczenie">
+                        <option>brak</option>
+                        <option>1–2 projekty</option>
+                        <option>3 i więcej</option>
+                    </select>
+
+                    <label style="margin-top:6px;">Zainteresowania związane z projektem:</label>
+                    <ul class="checkbox-list">
+                        <li><label><input type="checkbox" name="zain_nauki_scisle"> nauki ścisłe</label></li>
+                        <li><label><input type="checkbox" name="zain_humanistyczne"> humanistyczne</label></li>
+                        <li><label><input type="checkbox" name="zain_artystyczne"> artystyczne</label></li>
+                        <li><label><input type="checkbox" name="zain_techniczne"> techniczne</label></li>
+                        <li><label><input type="checkbox" name="zain_inne"> inne</label></li>
+                    </ul>
+
+                    <label style="margin-top:6px;">Znajomość języków obcych:</label>
+                    <ul class="checkbox-list">
+                        <li><label><input type="checkbox" name="jezyk_ang"> angielski</label></li>
+                        <li><label><input type="checkbox" name="jezyk_niem"> niemiecki</label></li>
+                        <li><label><input type="checkbox" name="jezyk_fr"> francuski</label></li>
+                        <li><label><input type="checkbox" name="jezyk_inny"> inny</label></li>
+                    </ul>
+
+                    <label style="margin-top:6px;">Forma udziału w projekcie:</label>
+                    <ul class="radio-list">
+                        <li><label><input type="radio" name="forma_udzialu" value="indywidualna"> indywidualna</label></li>
+                        <li><label><input type="radio" name="forma_udzialu" value="grupowa"> grupowa</label></li>
+                        <li><label><input type="radio" name="forma_udzialu" value="lider"> jako lider zespołu</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deklaracja uczestnika -->
+        <div class="box-group" style="margin-top:10px;">
+            <div class="box-title">Deklaracja uczestnika:</div>
+            <p style="font-size:12px; margin:0 0 8px 0;">
+                Oświadczam, że zapoznałem(am) się z regulaminem projektu / konkursu i zobowiązuję się do jego przestrzegania.
+            </p>
+            <div class="row">
+                <div class="field">
+                    <label>Podpis ucznia:</label>
+                    <input type="text" name="podpis_ucznia">
+                </div>
+                <div class="field">
+                    <label>Data:</label>
+                    <input type="date" name="data_podpisu">
+                </div>
+            </div>
+        </div>
+
+        <!-- Opinia nauczyciela -->
+        <div style="margin-top:10px;">
+            <label>Opinia nauczyciela / wychowawcy</label>
+            <textarea class="big-textarea" name="opinia"></textarea>
+        </div>
+
+        <!-- Przyciski wysyłania kopii -->
+        <div class="buttons-row">
+            <button type="button">Wyślij kopię formularza na mój e-mail</button>
+            <button type="button">Wyślij odpowiedź również na mój e-mail</button>
+        </div>
+
+        <!-- Reset / Submit -->
+        <div class="center-row">
+            <button type="reset">RESET</button>
+            <button type="submit">SUBMIT</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
